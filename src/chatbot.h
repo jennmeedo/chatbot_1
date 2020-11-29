@@ -12,12 +12,13 @@ class ChatBot
 {
 private:
     // data handles (owned)
-    std::shared_ptr<wxBitmap> _image; // avatar image
+    wxBitmap * _image; // avatar image
 
     // data handles (not owned)
     GraphNode *_currentNode;
     GraphNode *_rootNode;
     ChatLogic *_chatLogic;
+    std::string _fileName;
 
     // proprietary functions
     int ComputeLevenshteinDistance(std::string s1, std::string s2);
@@ -30,6 +31,10 @@ public:
 
     //// STUDENT CODE
     ////
+    ChatBot(const ChatBot & cb);
+    ChatBot(ChatBot && cb);
+    ChatBot& operator=(const ChatBot& cb);
+    ChatBot& operator=(ChatBot&& cb);
 
     ////
     //// EOF STUDENT CODE
@@ -38,7 +43,7 @@ public:
     void SetCurrentNode(GraphNode *node);
     void SetRootNode(GraphNode *rootNode) { _rootNode = rootNode; }
     void SetChatLogicHandle(ChatLogic *chatLogic) { _chatLogic = chatLogic; }
-    std::shared_ptr<wxBitmap> GetImageHandle() { return _image; }
+    wxBitmap* GetImageHandle() { return _image; }
 
     // communication
     void ReceiveMessageFromUser(std::string message);

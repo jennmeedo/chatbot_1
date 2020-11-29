@@ -43,13 +43,13 @@ public:
 
     // getter / setter
     void SetPanelDialogHandle(ChatBotPanelDialog *panelDialog);
-    //oid SetChatbotHandle(ChatBot *chatbot);
+    //void SetChatbotHandle(ChatBot *chatbot);
 
     // proprietary functions
     void LoadAnswerGraphFromFile(std::string filename);
     void SendMessageToChatbot(std::string message);
     void SendMessageToUser(std::string message);
-    std::shared_ptr<wxBitmap> GetImageFromChatbot();
+    wxBitmap* GetImageFromChatbot();
 };
 
 #endif /* CHATLOGIC_H_ */
