@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/parallels/projects/chatbot/build",
+  "command": "/usr/bin/g++  -DWXUSINGDLL -D__WXGTK3__ -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1   -pthread -g   -std=gnu++1z -o CMakeFiles/membot.dir/src/chatbot.cpp.o -c /home/parallels/projects/chatbot/src/chatbot.cpp",
+  "file": "/home/parallels/projects/chatbot/src/chatbot.cpp"
+},
+{
+  "directory": "/home/parallels/projects/chatbot/build",
+  "command": "/usr/bin/g++  -DWXUSINGDLL -D__WXGTK3__ -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1   -pthread -g   -std=gnu++1z -o CMakeFiles/membot.dir/src/chatgui.cpp.o -c /home/parallels/projects/chatbot/src/chatgui.cpp",
+  "file": "/home/parallels/projects/chatbot/src/chatgui.cpp"
+},
+{
+  "directory": "/home/parallels/projects/chatbot/build",
+  "command": "/usr/bin/g++  -DWXUSINGDLL -D__WXGTK3__ -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1   -pthread -g   -std=gnu++1z -o CMakeFiles/membot.dir/src/chatlogic.cpp.o -c /home/parallels/projects/chatbot/src/chatlogic.cpp",
+  "file": "/home/parallels/projects/chatbot/src/chatlogic.cpp"
+},
+{
+  "directory": "/home/parallels/projects/chatbot/build",
+  "command": "/usr/bin/g++  -DWXUSINGDLL -D__WXGTK3__ -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1   -pthread -g   -std=gnu++1z -o CMakeFiles/membot.dir/src/graphedge.cpp.o -c /home/parallels/projects/chatbot/src/graphedge.cpp",
+  "file": "/home/parallels/projects/chatbot/src/graphedge.cpp"
+},
+{
+  "directory": "/home/parallels/projects/chatbot/build",
+  "command": "/usr/bin/g++  -DWXUSINGDLL -D__WXGTK3__ -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1   -pthread -g   -std=gnu++1z -o CMakeFiles/membot.dir/src/graphnode.cpp.o -c /home/parallels/projects/chatbot/src/graphnode.cpp",
+  "file": "/home/parallels/projects/chatbot/src/graphnode.cpp"
+}
+]
