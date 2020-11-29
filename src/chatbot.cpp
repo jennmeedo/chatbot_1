@@ -78,12 +78,11 @@ ChatBot::ChatBot(ChatBot &&cb)
 }
 ChatBot &ChatBot::operator=(const ChatBot &cb)
 {
+    std::cout << "ChatBot Copy Assignment" << std::endl;
     if (this == &cb)
     {
         return *this;
     }
-
-    std::cout << "ChatBot Copy Assignment" << std::endl;
 
     // invalidate data handles
     _chatLogic = cb._chatLogic;
@@ -98,13 +97,12 @@ ChatBot &ChatBot::operator=(const ChatBot &cb)
 }
 ChatBot &ChatBot::operator=(ChatBot &&cb)
 {
-
+    std::cout << "ChatBot move Assignment" << std::endl;
     if (this == &cb)
     {
         return *this;
     }
 
-    std::cout << "ChatBot move Assignment" << std::endl;
     // invalidate data handles
     _chatLogic = cb._chatLogic;
     cb._chatLogic = nullptr;
