@@ -196,12 +196,12 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     }
 
     // add chatbot to graph root node
-    auto chatbot = std::make_unique< ChatBot>("../images/chatbot.png");
+    ChatBot chatbot("../images/chatbot.png");
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
-    chatbot->SetChatLogicHandle(this);
+    chatbot.SetChatLogicHandle(this);
 
-    chatbot->SetRootNode(rootNode);
-    SetChatbotHandle(chatbot.get());
+    chatbot.SetRootNode(rootNode);
+    SetChatbotHandle(&chatbot);
     rootNode->MoveChatbotHere(std::move(chatbot));
     
     ////
@@ -213,7 +213,7 @@ void ChatLogic::SetPanelDialogHandle(ChatBotPanelDialog *panelDialog)
     _panelDialog = panelDialog;
 }
 
- void ChatLogic::SetChatbotHandle(ChatBot *chatbot)
+ void ChatLogic::SetChatbotHandle(ChatBot* chatbot)
  {
      _chatBot = chatbot;
  }

@@ -70,7 +70,6 @@ ChatBot::ChatBot(ChatBot &&cb)
     _rootNode = cb._rootNode;
     cb._rootNode = nullptr;
     _fileName = cb._fileName;
-    cb._fileName = nullptr;
 
     // load image into heap memory
     _image = cb._image;
