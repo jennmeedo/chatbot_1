@@ -111,6 +111,8 @@ vector
 -
 string
 -
+memory
+-
 chatbot.h
 /home/parallels/projects/chatbot/src/chatbot.h
 

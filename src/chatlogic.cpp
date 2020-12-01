@@ -112,7 +112,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                         // create new element if ID does not yet exist
                         if (newNode == _nodes.end())
                         {
-                            _nodes.emplace_back( std::make_unique<GraphNode>(id));
+                            _nodes.emplace_back (new GraphNode(id));
                             newNode = _nodes.end() - 1; // get iterator to last element
 
                             // add all answers to current node
@@ -143,7 +143,7 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
                             std::unique_ptr<GraphEdge> edge =  std::make_unique<GraphEdge>(id);
                             edge->SetChildNode(childNode->get());
                             edge->SetParentNode(parentNode->get());
-                            _edges.push_back(edge.get());
+                            //_edges.push_back(edge.get());
 
                             // find all keywords for current node
                             AddAllTokensToElement("KEYWORD", tokens, *edge);
@@ -196,13 +196,12 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
     }
 
     // add chatbot to graph root node
-    ChatBot chatbot("../images/chatbot.png");
-    // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
+     ChatBot chatbot =  ChatBot("../images/chatbot.png");
     chatbot.SetChatLogicHandle(this);
 
     chatbot.SetRootNode(rootNode);
-    SetChatbotHandle(&chatbot);
-    rootNode->MoveChatbotHere(std::move(chatbot));
+    //SetChatbotHandle(&chatbot);
+    rootNode->MoveChatbotHere( std::move( chatbot));
     
     ////
     //// EOF STUDENT CODE
